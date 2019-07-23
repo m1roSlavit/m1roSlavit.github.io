@@ -4,8 +4,6 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="./css/main.min.css"/>
-    <script src="./js/main.min.js"></script>
     <meta name="viewport" content="width=device-width" initial-scale="1"/>
     <title>LAMBDA</title>
   </head>
@@ -171,7 +169,10 @@
               </div>
               <div class="form__line clearfix">
                 <label class="form__label">Date
-                  <input class="form__date" type="date" placeholder="date *" name="date"/>
+                  <div class="form__date">
+                    <input class="form-control" type="text" placeholder="date *" value="" name="date" id="form__date"/>
+                    <div class="form__date-icon"><i class="fas fa-calendar-alt"></i></div>
+                  </div>
                   <div class="form__error"></div>
                 </label>
                 <label class="form__label">Party number
@@ -241,5 +242,7 @@
         </div>
       </div>
     </footer>
+    <link rel="stylesheet" href="./css/main.min.css"/>
+    <script src="./js/main.min.js"></script>
   </body>
 </html>
