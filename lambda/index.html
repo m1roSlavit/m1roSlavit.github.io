@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="./css/main.min.css"/>
+    <script src="./js/main.min.js"></script>
     <meta name="viewport" content="width=device-width" initial-scale="1"/>
     <title>LAMBDA</title>
   </head>
@@ -14,9 +15,12 @@
         <div class="container">
           <div class="header__top clearfix">
             <div class="header__logo"><img src="./img/logo.png" alt="Logo"/></div>
+            <div class="nav-burger-wrap">
+              <div class="nav-burger"><span class="nav-burger__line"></span></div>
+            </div>
             <div class="header__socials"><a class="header__social" href="#"><i class="fab fa-twitter"></i></a><a class="header__social" href="#"><i class="fab fa-youtube"></i></a><a class="header__social" href="#"><i class="fab fa-facebook-f"></i></a></div>
             <div class="header__nav">
-              <nav class="nav"><a class="nav__item nav__item_active" href="#" data-link="home" data-id="0">Home</a><a class="nav__item" href="#" data-link="about" data-id="1">About</a><a class="nav__item" href="#" data-link="igredients" data-id="2">Igredients</a><a class="nav__item" href="#" data-link="menu" data-id="3">Menu</a><a class="nav__item" href="#" data-link="reviews" data-id="4">Reviews</a><a class="nav__item" href="#" data-link="reservations" data-id="5">Reservations</a>
+              <nav class="nav"><a class="nav__item nav__item_active slow-scroll" href=".header" data-link=".header" data-id="0">Home</a><a class="nav__item slow-scroll" href=".about" data-link=".about" data-id="1">About</a><a class="nav__item slow-scroll" href=".ingredients" data-link=".ingredients" data-id="2">Igredients</a><a class="nav__item slow-scroll" href=".menu" data-link=".menu" data-id="3">Menu</a><a class="nav__item slow-scroll" href=".reviews" data-link=".reviews" data-id="4">Reviews</a><a class="nav__item slow-scroll" href=".reservations" data-link=".reservations" data-id="5">Reservations</a>
               </nav>
             </div>
           </div>
@@ -30,18 +34,18 @@
         </div>
       </div>
     </header>
-    <div class="about-wrap">
+    <section class="about-wrap">
       <div class="container">
         <div class="about">
           <div class="about__left-col">
             <h2 class="title title_medium title_with-divider-medium about__title">Just the right food</h2>
             <p class="descr_dark descr about__descr">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p><img class="about__photo" src="./img/cook.png" alt="cook photo"/>
           </div>
-          <div class="about__right-col"><img src="./img/dish.png" alt="dish photo"/></div>
+          <div class="about__right-col wow fadeInRight"><img src="./img/dish.png" alt="dish photo"/></div>
         </div>
       </div>
-    </div>
-    <div class="ingredients-wrap">
+    </section>
+    <section class="ingredients-wrap">
       <div class="container">
         <div class="ingredients clearfix">
           <div class="ingredients__block">
@@ -51,8 +55,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="menu-wrap">
+    </section>
+    <section class="menu-wrap">
       <div class="container">
         <div class="menu clearfix">
           <div class="menu__left-col">
@@ -133,8 +137,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="reviews-wrap">
+    </section>
+    <section class="reviews-wrap">
       <div class="container">
         <div class="reviews">
           <div class="review">
@@ -144,8 +148,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="reservations-wrap">
+    </section>
+    <section class="reservations-wrap">
       <div class="container">
         <div class="reservations clearfix">
           <div class="reservations__imgs clearfix"><img class="reservations__img" src="./img/reservation-dish-2.png" alt="photo dish"/><img class="reservations__img" src="./img/reservation-dish-1.png" alt="photo dish"/></div>
@@ -153,27 +157,32 @@
             <h2 class="title title_medium title_with-divider-medium reservations__title">Just the right food</h2>
             <p class="descr descr_dark reservations__descr">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.</p>
             <p class="descr descr_dark reservations__descr">Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
-            <form class="reservations__form form" action="" method="post">
+            <form class="reservations__form form" action="/phphhmail.php" method="post">
+              <div class="hide reservations__form-errors" data-error-incorect="Поле заполнено некоректно"></div>
               <div class="form__line clearfix">
                 <label class="form__label">Name
-                  <input class="form__input" type="text" placeholder="you name *"/>
+                  <input class="form__input" type="text" name="name" placeholder="you name *"/>
+                  <div class="form__error"></div>
                 </label>
                 <label class="form__label">Email
-                  <input class="form__input" type="email" placeholder="you email *"/>
+                  <input class="form__input" type="text" name="email" placeholder="you email *"/>
+                  <div class="form__error"></div>
                 </label>
               </div>
               <div class="form__line clearfix">
                 <label class="form__label">Date
-                  <input class="form__date" type="date" placeholder="date *"/>
+                  <input class="form__date" type="date" placeholder="date *" name="date"/>
+                  <div class="form__error"></div>
                 </label>
                 <label class="form__label">Party number
-                  <select class="form__select">
-                    <option class="form__select-option" disabled="disabled" selected="selected">party number</option>
-                    <option class="form__select-option">1</option>
-                    <option class="form__select-option">2</option>
-                    <option class="form__select-option">3</option>
-                    <option class="form__select-option">4</option>
+                  <select class="form__select" name="partyNumber">
+                    <option class="form__select-option" selected="selected" value="started">party number</option>
+                    <option class="form__select-option" value="1">1</option>
+                    <option class="form__select-option" value="2">2</option>
+                    <option class="form__select-option" value="3">3</option>
+                    <option class="form__select-option" value="4">4</option>
                   </select>
+                  <div class="form__error"></div>
                 </label>
               </div>
               <button class="form__button">Book now!</button>
@@ -181,6 +190,56 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrap">
+          <div class="footer-row">
+            <div class="footer-col">
+              <div class="footer-item">
+                <div class="footer-about">
+                  <h2 class="title title_light title_with-divider-light_small footer-about__title">About Us</h2>
+                  <p class="descr descr_light footer__text">Lambda's new and expanded Chelsea location represents a truly authentic <span class="footer__text-b">Greek</span> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café.</p>
+                  <p class="descr descr_light footer-about__text">Lamda the best restaurant in town</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer-col">
+              <div class="footer-item">
+                <div class="footer-hours">
+                  <h2 class="title title_light title_with-divider-light_small footer-hours__title">Opening Hours</h2>
+                  <p class="descr descr_light footer__text"><span class="footer__text-b">Mon-Thu: </span><span>7:00am-8:00pm </span></p>
+                  <p class="descr descr_light footer__text"><span class="footer__text-b">Fri-Sun:</span><span>7:00am-10:00pm</span></p>
+                </div>
+              </div>
+              <div class="footer-item">
+                <div class="footer-paiment">
+                  <div class="footer-paiment__method-block"><i class="fas fa-credit-card"></i></div>
+                  <div class="footer-paiment__method-block"><i class="fab fa-cc-paypal"></i></div>
+                  <div class="footer-paiment__method-block"><i class="fab fa-cc-visa"></i></div>
+                  <div class="footer-paiment__method-block"><i class="fab fa-cc-discover"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-col">
+              <div class="footer-item">
+                <div class="footer-location">
+                  <h2 class="title title_light title_with-divider-light_small footer-location__title">Our Location</h2>
+                  <p class="footer-location__adress descr descr_light footer__text-b">19th Paradise Street Sitia <br> 128 Meserole Avenue</p>
+                </div>
+              </div>
+              <div class="footer-item">
+                <div class="footer-socials">
+                  <div class="footer-socials__social"><i class="fab fa-facebook-f"></i></div>
+                  <div class="footer-socials__social"><i class="fab fa-youtube"></i></div>
+                  <div class="footer-socials__social"><i class="fab fa-twitter-square"></i></div>
+                  <div class="footer-socials__social"><i class="fab fa-trello"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
