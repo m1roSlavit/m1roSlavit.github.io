@@ -1,0 +1,7 @@
+var lang_file = {
+    project: 'Проект',
+    article: 'Стаття',
+    from: 'вiд',
+    more: 'Деталі проекту',
+    blog_more: 'Більше статей',
+};
