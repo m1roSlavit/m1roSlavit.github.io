@@ -390,6 +390,11 @@
 		flex-basis: 100%;;
 	}
 
+	.section-main .second-heading .heading-wrap {
+		width: 100%;
+		max-width: 100%;
+	}
+
 	.section-main .feedback-form {
 		min-height: auto;
 		padding-top: 15px;
