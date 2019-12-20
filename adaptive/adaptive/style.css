@@ -394,6 +394,8 @@ html,body{
 		/* box-sizing: border-box; */
 		top: calc(-100% - 80px);
 		left: 50%;
+		bottom: 0;
+		right: 0;
 		width: calc(100% + 2px);
 		max-width: calc(100% + 2px);
 		transform: translateX(-50%);
