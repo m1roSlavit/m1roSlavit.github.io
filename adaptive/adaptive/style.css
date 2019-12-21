@@ -12,6 +12,10 @@ html,body{
 	max-width: 1216px;
 }
 
+.sticky-line {
+	background: #323F4B;
+}
+
 .header-wrap .mobileMenu {
 	z-index: 1;
 }
@@ -104,6 +108,10 @@ html,body{
     -webkit-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
     will-change: color;
+	}
+
+	.actual-news .fresh-item {
+		height: 140px;
 	}
 	
 	/* .sticky-line__burger-wrapper {
@@ -773,9 +781,4 @@ html,body{
 	.footer-left__logo {
 		margin-bottom: 15px;
 	}
-}
-
-
-.lock {
-	overflow: hidden !important;
 }
