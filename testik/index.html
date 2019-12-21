@@ -23,15 +23,19 @@
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="msapplication-TileImage" content="http://gromada/public/img/icons/mstile-144x144.png">
     <meta name="msapplication-config" content="http://gromada/public/browserconfig.xml">
-    <meta name="theme-color" content="#fc1f6a">
+		<meta name="theme-color" content="#fc1f6a">
+		<link href="./adaptive/all.css" rel="stylesheet">
+		
 
-    <link rel="stylesheet" href="./Головна - Громада_files/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+		<link rel="stylesheet" href="./Головна - Громада_files/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
     <link href="./Головна - Громада_files/bulma.css" rel="stylesheet">
     <link href="./Головна - Громада_files/common.css" rel="stylesheet">
-    <link href="./Головна - Громада_files/mainpage.css" rel="stylesheet">
+		<link href="./Головна - Громада_files/mainpage.css" rel="stylesheet">
+		
 
         <link href="./Головна - Громада_files/mainblocks.css" rel="stylesheet">
 
+				<link href="./adaptive/style.css" rel="stylesheet">
     <meta property="og:site_name" content="Головна - Громада">
     <meta property="og:type" content="website">
     <meta name="og_title" property="og:title" content="">
@@ -48,12 +52,27 @@
 <script src="./Головна - Громада_files/swiper.min.js.Без названия"></script><link href="./Головна - Громада_files/swiper.min.css" rel="stylesheet" type="text/css"></head>
 
 <body>
-        <div class="sticky-line">
-        <div class="sticky-line-wrap navbar-menu">
+      <div class="sticky-line">
+				<div class="container">
+					<div class="sticky-line__burger-wrapper">
+						<div id="sticky-line-burger" class="sticky-line__burger"><span></span></div>
+					</div>
+				</div>
+        <div id="sticky-line-nav-content" class="sticky-line-wrap navbar-menu">
             <nav class="sticky-line__nav navbar-start">
                 <a href="http://gromada/#" class="sticky-line__nav-link active">ГОЛОВНА</a>
                 <a href="http://gromada/#" class="sticky-line__nav-link">ПРО НАС</a>
-                <a href="http://gromada/#" class="sticky-line__nav-link">КОНТАКТИ</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link">КОНТАКТИ</a>
+								<hr>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Новини</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Статті</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Бізнес</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Реклама</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Оголошення</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Вакансії</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Афіша</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Галерея</a>
+								<a href="http://gromada/#" class="sticky-line__nav-link mobile-only">Архів</a>
             </nav>
             <div class="sticky-line__search navbar-end">
                 <a href="http://gromada/#" class="fa-fw sticky-line__nav-link social-link"><i class="fab fa-twitter"></i></a>
@@ -61,7 +80,7 @@
                 <a href="http://gromada/#" class="fa-fw sticky-line__nav-link social-link"><i class="fab fa-youtube"></i></a>
                 <a href="http://gromada/#" class="fa-fw sticky-line__nav-link social-link"><i class="fab fa-telegram-plane"></i></a>
             </div>
-        </div>
+        </div id="">
     </div>
     <header class="header" id="header">
         <div class="container">
@@ -83,7 +102,7 @@
                 <div class="city-wrap flex">
                     <div id="areas-all" class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-multirow">
                         <div class="swiper-wrapper" style="width: 1729px;">
-                                                            <div class="swiper-slide swiper-slide-visible swiper-slide-active" itemscope="" itemtype="http://schema.org/ImageGallery" data-swiper-column="0" data-swiper-row="0" style="order: 0; width: 113.5px; margin-right: 10px;">
+                                  <div class="swiper-slide swiper-slide-visible swiper-slide-active" itemscope="" itemtype="http://schema.org/ImageGallery" data-swiper-column="0" data-swiper-row="0" style="order: 0; width: 113.5px; margin-right: 10px;">
                                     <div class="swiper-zoom-container" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
                                         <a class="city-wrap__item flex" href="http://gromada/other">
                                             <div class="city-wrap__item-photo">
@@ -111,10 +130,10 @@
                                         </a>
                                     </div>
                                 </div>
-                                                            <div class="swiper-slide swiper-slide-visible" itemscope="" itemtype="http://schema.org/ImageGallery" data-swiper-column="1" data-swiper-row="0" style="-webkit-box-ordinal-group: 1; order: 1; width: 113.5px; margin-right: 10px;">
-                                    <div class="swiper-zoom-container" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
-                                        <a class="city-wrap__item flex" href="http://gromada/other">
-                                            <div class="city-wrap__item-photo">
+                 <div class="swiper-slide swiper-slide-visible" itemscope="" itemtype="http://schema.org/ImageGallery" data-swiper-column="1" data-swiper-row="0" style="-webkit-box-ordinal-group: 1; order: 1; width: 113.5px; margin-right: 10px;">
+                        <div class="swiper-zoom-container" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+                                <a class="city-wrap__item flex" href="http://gromada/other">
+                                    <div class="city-wrap__item-photo">
                                                 
                                                 <img itemprop="thumbnail" class="swiper-lazy swiper-lazy-loaded" alt="City" src="./Головна - Громада_files/3.png">
                                                 <div class="photo-mask"></div>
@@ -557,7 +576,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section section-main">
     <div class="container">
         <div class="columns">
             <section class="column is-one-quarter left-line">
@@ -1719,6 +1738,7 @@
     
 <script defer="" type="text/javascript" src="./Головна - Громада_files/main.js.Без названия"></script>
 <script defer="" type="text/javascript" src="./Головна - Громада_files/main.js(1).Без названия"></script>
+<script src="./adaptive/script.js"></script>
 
 
 
