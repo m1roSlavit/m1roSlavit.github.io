@@ -1,0 +1,252 @@
+@font-face {
+  font-family: 'TrajanPro-Bold';
+  src: url('./fonts/TrajanPro-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TrajanPro-Regular';
+  src: url('./fonts/TrajanPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bookman Old Style Reg';
+  src: url('./fonts/bookos.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* cost-block */
+
+.price__body {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -22.5px 0 -22.5px;
+}
+
+.price__column {
+	padding: 0px 22.5px 0px 22.5px;
+	flex: 1 1 50%;
+	max-width: 50%;
+}
+
+.price {
+	background-color: #F9F9F9;
+	padding-bottom: 140px;
+	padding-top: 50px;
+	font-family: "Bookman Old Style Reg";
+	background-image: url("./images/angel2.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.price .container {
+	width: 1300px;
+	/* background-color: red; */
+}
+
+.price__title {
+	font-size: 48px;
+	font-family: "Bookman Old Style Reg";
+	margin-top: auto;
+	margin-left: 15px;
+	color: #464646;
+}
+
+.price__heading {
+	display: flex;
+	margin-bottom: 66px;
+}
+
+.price__icon img{
+	height: 100px;
+}
+
+.price-block {
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border: 2px solid #C75A52;
+	background-color: #fff;
+	position: relative;
+	margin-left: 50px;
+	margin-bottom: 40px;
+}
+
+.price-block:last-child {
+	margin-bottom: 0;
+}
+
+.price-block__list-item {
+	position: relative;
+	padding-left: 13px;
+	margin-bottom: 10px;
+}
+
+.price-block__list-item:last-child {
+	margin-bottom: 0;
+}
+
+.price-block__list-item:before {
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: #C75A52;
+	border-radius: 50%;
+	position: absolute;
+	left: 0px;
+	top: 8px;
+}
+
+.price-block__title {
+	color: #464646;
+	font-size: 27.66px;
+	position: absolute;
+	top: -15px;
+	left: 50px;
+	background-color: #fff;
+	padding: 1px 15px 1px 1px;
+}
+
+.price-block__list {
+	color: #565353;
+	font-size: 22.13px;
+	margin-bottom: 35px;
+}
+
+.price-block__cost {
+	font-family: "TrajanPro-Regular";
+	font-size: 22.13px;
+	text-transform: uppercase;
+	color: #424141;
+	padding-left: 13px;
+}
+
+.price-block__cost span{
+	font-family: "TrajanPro-Bold";
+	color: #af5a53;
+}
+
+.price-block__plus-info {
+	color: #838080;
+	font-size: 22.13px;
+}
+.price-block__plus-info:before {
+	display: none;
+}
+/* /cost-block */
+
+@media screen and (max-width: 1350px) {
+	.price .container {
+		width: 1100px;
+	}
+
+	.price__icon img{
+		height: 90px;
+	}
+
+	.price__title {
+		font-size: 38px
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.price .container {
+		width: 970px;
+	}
+
+	.price__icon img{
+		height: 90px;
+	}
+
+	.price-block {
+		margin-left: 0;
+	}
+
+	.price__heading {
+		margin-bottom: 40px;
+	}
+
+	.price__title {
+		font-size: 33px
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.price .container {
+		width: 750px;
+	}
+
+	.price {
+		padding-bottom: 50px;
+	}
+
+	.price__icon img{
+		height: 70px;
+	}
+
+	.price-block {
+		margin-left: 0;
+		padding: 30px 20px;
+	}
+
+	.price-block__title {
+		left: 20px;
+	}
+
+	.price__heading {
+		margin-bottom: 40px;
+	}
+
+	.price__title {
+		font-size: 30px
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.price .container {
+		width: 100%;
+	}
+
+	.price {
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+
+	.price__icon img{
+		height: 70px;
+	}
+
+	.price-block {
+		margin-left: 0;
+		padding: 30px 20px;
+	}
+
+	.price__column {
+		flex: 1 1 100%;
+		max-width: 100%;
+		margin-bottom: 50px;
+	}
+
+	.price__column:last-child {
+		margin: 0;
+	}
+
+	.price-block__title {
+		left: 20px;
+	}
+
+	.price__heading {
+		margin-bottom: 40px;
+	}
+
+	.price__title {
+		font-size: 30px
+	}
+}

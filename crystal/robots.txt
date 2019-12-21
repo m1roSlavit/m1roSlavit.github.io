@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /err404.html
+Host: https://crystal.kiev.ua
+Sitemap: https://crystal.kiev.ua/sitemap.xml
