@@ -392,7 +392,7 @@ html,body{
 		position: fixed;
 		background: #fff;
 		/* box-sizing: border-box; */
-		top: calc(-100% - 80px);
+		top: -100%;
 		left: 50%;
 		bottom: 0;
 		right: 0;
@@ -405,7 +405,8 @@ html,body{
 		overflow-y: scroll;
 		padding: 15px 70px 15px 15px;
 		align-items: flex-start;
-		padding-bottom: 80px;
+		/* padding-bottom: 80px; */
+		height: 100%;
 	}
 
 .sticky-line-wrap::-webkit-scrollbar { width: 0; }
