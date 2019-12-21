@@ -15,12 +15,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	(function() {
 		var burger = document.getElementById("sticky-line-burger");
 		var navContent = document.getElementById("sticky-line-nav-content");
-		console.log(burger);
 		burger.addEventListener("click", function () {
-			console.log("3232")
 			toggleClassCustom(burger, "active");
-			toggleClassCustom(navContent, "active")
-			toggleClassCustom(document.body, "lock")
+			toggleClassCustom(navContent, "active");
+			toggleClassCustom(document.body, "lock");
+		});
+
+		navContent.addEventListener("click", function (e) {
+			if (e.target.className.search("sticky-line__nav-link") != -1) {
+				toggleClassCustom(burger, "active");
+				toggleClassCustom(navContent, "active");
+				toggleClassCustom(document.body, "lock");
+			} else {
+				e.preventDefault;
+			}
 		})
+
 	})()
 })
