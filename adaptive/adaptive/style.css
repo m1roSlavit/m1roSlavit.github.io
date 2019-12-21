@@ -724,14 +724,14 @@ html,body{
 
 	.section-main .nlb-item.item-50 .nlb-item__title{
 		float: left;
-		width: 60%;
+		width: 100%;
 		margin-top: 0px;
 		text-align: left;
 	}
 
 	.section-main .nlb-item.item-50 .infos{
 		float: left;
-		width: 60%;
+		width: 100%;
 		text-align: left;
 	}
 
@@ -758,14 +758,14 @@ html,body{
 
 	.section-main .nlb-item.article-item .nlb-item__title{
 		float: left;
-		width: 60%;
+		width: 100%;
 		margin-top: 0px;
 		text-align: left;
 	}
 
 	.section-main .nlb-item.article-item .infos{
 		float: left;
-		width: 60%;
+		width: 100%;
 		text-align: left;
 	}
 
