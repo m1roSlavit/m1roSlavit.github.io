@@ -406,7 +406,7 @@ html,body{
 		padding: 15px 70px 15px 15px;
 		align-items: flex-start;
 		/* padding-bottom: 80px; */
-		height: auto;
+		height: 100%;
 	}
 
 .sticky-line-wrap::-webkit-scrollbar { width: 0; }
