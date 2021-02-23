@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row mb-3 mt-4">
+      <h1>Lab checker:</h1>
+    </div>
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-floating">
+          <textarea style="min-height: 400px;" class="bg-light form-control code-text-area" placeholder="Leave a comment here" id="code-text-area" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Type code:</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="form bg-light border p-3">
+          <label for="formGroupExampleInput1" class="form-label">Виберіть лабараторну:</label>
+          <select class=" mb-2 form-select" id="formGroupExampleInput1" aria-label="Default select example">
+            <option selected>None</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <label for="formGroupExampleInput1" class="form-label">Виберіть завдання:</label>
+          <select class=" mb-2 form-select" id="formGroupExampleInput1" aria-label="Default select example">
+            <option selected>None</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <label for="formGroupExampleInput2" class="form-label">Виберіть свій варіант:</label>
+          <select class=" mb-4 form-select" id="formGroupExampleInput2" aria-label="Default select example">
+            <option selected>None</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button type="button" id="check-button" class="w-100 btn btn-secondary">Check</button>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="error-block border bg-light p-2 h-100">
+          <div class="error-block__title d-flex align-items-center">
+            <h6 class="mt-auto mb-auto">Logs:</h6>
+            <button type="button" id="clear-log-button" class="btn btn-dark pl-1 pr-1 pt-0 pb-0 fs-6 font-weight-normal" style="margin-left: auto;">
+              clear logs
+            </button>
+          </div>
+          <hr class="mb-1 mt-2"/>
+          <div class="error-block__main" id="logs-block"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .error-block__main {
+      height: 300px;
+      overflow-y: scroll;
+    }
+
+    .code-text-area {
+      line-height: 1.4em;
+      font-size: 12px;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    .disabledTab{
+      pointer-events: none;
+    }
+  </style>
+
+  <script src="main.js"></script>
+</body>
+</html>
