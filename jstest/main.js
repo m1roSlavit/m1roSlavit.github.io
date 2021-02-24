@@ -1,4 +1,11 @@
-'use strict';
+let codeEditor = CodeMirror(document.querySelector('#code-text-area'), {
+  value: 'function yourFunction() {\n	return;\n}\n',
+  mode:  'javascript',
+  theme: 'dracula',
+  tabSize: 2,
+  lineNumbers: true,
+  extraKeys: {'Tab-Space': 'autocomplete'}
+});
 
 const test = {
   name: 'lab-1',
@@ -19,7 +26,7 @@ const clearLog = () => {
   LOGS_BLOCK.innerHTML = '';
 };
 
-const writeLog = (text, type = 'normal', prefix = '') => {
+const writeLog = (text, type = 'normal', prefix = '()') => {
   LOGS_BLOCK.innerHTML += `
         <span class="badge bg-${type}">${prefix}:</span> ${text} \n
         <hr class="mb-1 mt-1"/>
@@ -27,12 +34,14 @@ const writeLog = (text, type = 'normal', prefix = '') => {
 };
 
 const getFunction = () => {
-  const textareaValue = TEXT_AREA.value;
   let userCommand;
-  try {
-    if (textareaValue === '') throw new Error('empty command');
 
-    userCommand = eval(textareaValue);
+  console.log(userCommand);
+  try {
+    (function () {
+      eval(codeEditor.getValue());
+      userCommand = yourFunction;
+    })();
 
     if (typeof(userCommand) !== 'function')
       throw new Error('its not a function');

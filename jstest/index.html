@@ -7,7 +7,17 @@
   <title>JS test</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <!-- code mirror -->
+  <script src="codemirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="codemirror/theme/dracula.css">
+  <script src="codemirror/mode/javascript/javascript.js"></script>
+  <!-- addon code mirror -->
+  <script src="codemirror/addon/hint/show-hint.js"></script>
+  <script src="codemirror/addon/hint/javascript-hint.js"></script>
+  <link rel="stylesheet" href="codemirror/addon/hint/show-hint.css">
 </head>
 <body>
 
@@ -17,10 +27,14 @@
     </div>
     <div class="row mb-4">
       <div class="col">
-        <div class="form-floating">
+        <!-- <div class="form-floating">
           <textarea style="min-height: 400px;" class="bg-light form-control code-text-area" placeholder="Leave a comment here" id="code-text-area" style="height: 100px"></textarea>
           <label for="floatingTextarea2">Type code:</label>
+        </div> -->
+        <div class="code-sandbox bg-light border" id="code-text-area">
+
         </div>
+        <!-- <textarea style="display: none;" id="code-text-area"></textarea> -->
       </div>
     </div>
     <div class="row">
