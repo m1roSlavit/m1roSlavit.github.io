@@ -1,5 +1,5 @@
 let codeEditor = CodeMirror(document.querySelector('#code-text-area'), {
-  value: 'function yourFunction() {\n	return;\n}\n',
+  value: 'function func() {\n	return;\n}\n',
   mode:  'javascript',
   theme: 'dracula',
   tabSize: 2,
@@ -7,90 +7,52 @@ let codeEditor = CodeMirror(document.querySelector('#code-text-area'), {
   extraKeys: {'Tab-Space': 'autocomplete'}
 });
 
-const test = {
-  name: 'lab-1',
-  cases: [
-    [[1], 1],
-    [[2], 4],
-    [[3], 9],
-    [[4], 16],
-  ]
-};
-
 const TEXT_AREA_ID = 'code-text-area';
 const TEXT_AREA = document.querySelector('#' + TEXT_AREA_ID);
 const LOGS_BLOCK_ID = 'logs-block';
 const LOGS_BLOCK = document.querySelector('#' + LOGS_BLOCK_ID);
 
 const clearLog = () => {
-  LOGS_BLOCK.innerHTML = '';
+  LOGS_BLOCK.querySelector('#mocha').innerHTML = '';
+  LOGS_BLOCK.querySelector('#self-error').innerHTML = '';
+  mocha.suite.suites = []
+  mocha.suite._bail = false
 };
 
 const writeLog = (text, type = 'normal', prefix = '()') => {
-  LOGS_BLOCK.innerHTML += `
+  LOGS_BLOCK.querySelector('#self-error').innerHTML += `
         <span class="badge bg-${type}">${prefix}:</span> ${text} \n
         <hr class="mb-1 mt-1"/>
       `;
 };
 
-const getFunction = () => {
-  let userCommand;
-
-  console.log(userCommand);
-  try {
-    (function () {
-      eval(codeEditor.getValue());
-      userCommand = yourFunction;
-    })();
-
-    if (typeof(userCommand) !== 'function')
-      throw new Error('its not a function');
-
-  } catch (e) {
-    writeLog(e.message, 'danger', 'Error');
-    return false;
-  }
-
-  return userCommand;
+const getCode = () => {
+  return codeEditor.getValue()
 };
 
-const tryTest = (testfunc, test) => {
-  for (let i = 0; i < test.cases.length; i++) {
-    try {
-      const argumentsF = test.cases[i][0];
-      const result = testfunc(...argumentsF);
-      const expectedResult = test.cases[i][1];
-
-      if (result !== expectedResult)
-        throw new Error(`
-          Неправильне рішення,
-          очікувалось: ${expectedResult},
-          отримано: ${result}
-        `);
-      writeLog(`
-        очікувалось: ${expectedResult},
-        отримано: ${result}
-      `, 'info', 'Успішно');
-
-    } catch (e) {
-      writeLog(e.message, 'danger', 'Error');
-      return false;
-    }
-  }
-  return true;
-};
+const getTest = (id) => {
+  return "describe(\"pow\", function() {it(\"возводит число в степень n\", function() {assert.equal(func(2, 3), 8);assert.equal(func(3, 4), 81);});});";
+}
 
 const executeTest = testData => {
-  const userFunction = getFunction();
-  if (!userFunction) return;
+  clearLog()
 
-  if (tryTest(userFunction, testData))
-    writeLog('Пройдено всі тести успішно', 'success', '()');
+  const userCode = getCode();
+  const testCode = getTest();
+
+  try {
+    eval(userCode + testCode);
+    mocha.run(failures => console.log(failures));
+  }
+  catch (e) {
+    writeLog(e.message, 'danger', 'Error');
+  }
 };
 
 document.querySelector('#check-button').addEventListener('click', () => {
-  executeTest(test);
+  executeTest();
 });
+
 document.querySelector('#clear-log-button').addEventListener('click', () => {
   clearLog();
 });
