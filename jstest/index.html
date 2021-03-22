@@ -34,6 +34,22 @@
     // chai предоставляет большое количество функций. Объявим assert глобально
     let assert = chai.assert;
   </script>
+
+  <!-- fire base -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+  <!-- custom css -->
+
+  <link rel="stylesheet" href="css/load.css">
+  <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 
@@ -53,32 +69,41 @@
         <!-- <textarea style="display: none;" id="code-text-area"></textarea> -->
       </div>
     </div>
+    <div class="row mb-4">
+      <div class="col-12 position-relative">
+        <div class="spin-wrapper" id="task-block__spin" style="opacity: 0;">
+          <div class="spinner">
+          </div>
+        </div>
+        <div class="task-block border bg-light p-2">
+          <h6 class="task-block__title">Завдання:</h6>
+          <div class="task-block__data" id="task-block-data"></div>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-3">
-        <div class="form bg-light border p-3">
-          <label for="formGroupExampleInput1" class="form-label">Виберіть лабараторну:</label>
-          <select class=" mb-2 form-select" id="formGroupExampleInput1" aria-label="Default select example">
-            <option selected>None</option>
-            <option value="1">1</option>
+        <form class="form bg-light border p-3">
+          <label for="form-group-varient" class="form-label">Виберіть свій варіант:</label>
+          <select name="variant" class="mb-4 form-select form-choose-test-select" id="form-group-varient">
+            <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="formGroupExampleInput1" class="form-label">Виберіть завдання:</label>
-          <select class=" mb-2 form-select" id="formGroupExampleInput1" aria-label="Default select example">
-            <option selected>None</option>
-            <option value="1">1</option>
+          <label for="form-group-lab" class="form-label">Виберіть лабараторну:</label>
+          <select name="lab" class="mb-2 form-select form-choose-test-select" id="form-group-lab">
+            <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="formGroupExampleInput2" class="form-label">Виберіть свій варіант:</label>
-          <select class=" mb-4 form-select" id="formGroupExampleInput2" aria-label="Default select example">
-            <option selected>None</option>
-            <option value="1">1</option>
+          <label for="form-group-exercise" class="form-label">Виберіть завдання:</label>
+          <select name="exercise" class="mb-2 form-select form-choose-test-select" id="form-group-exercise">
+            <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
           <button type="button" id="check-button" class="w-100 btn btn-secondary">Check</button>
-        </div>
+        </form>
       </div>
       <div class="col-9">
         <div class="error-block border bg-light p-2 h-100">
@@ -97,32 +122,7 @@
       </div>
     </div>
   </div>
-  
-  <style>
-    .error-block__main {
-      height: 300px;
-      overflow-y: scroll;
-    }
 
-    .code-text-area {
-      line-height: 1.4em;
-      font-size: 12px;
-      font-family: 'Courier Prime', monospace;
-    }
-
-    .disabledTab{
-      pointer-events: none;
-    }
-
-    #mocha {
-      margin: 0;
-    }
-
-    #mocha-stats {
-      position: static;
-    }
-  </style>
-
-  <script src="main.js"></script>
+  <script type="module" src="script/index.js"></script>
 </body>
 </html>

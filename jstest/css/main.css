@@ -1,0 +1,39 @@
+.error-block__main {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.code-text-area {
+  line-height: 1.4em;
+  font-size: 12px;
+  font-family: 'Courier Prime', monospace;
+}
+
+.disabledTab{
+  pointer-events: none;
+}
+
+#mocha {
+  margin: 0;
+}
+
+#mocha-stats {
+  position: static;
+}
+
+.task-block {
+  min-height: 150px;
+}
+
+.spin-wrapper {
+  display: none;
+}
+
+.spin-wrapper.active {
+  display: block;
+  /* animation: spinIn 1s forwards; */
+}
+
+.spin-wrapper {
+  transition: all 1s ease;
+}

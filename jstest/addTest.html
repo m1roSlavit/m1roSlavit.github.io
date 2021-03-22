@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- fire base -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+</head>
+<body>
+  <form action="" id="add-panel" class="add-form">
+    <div class="add-form__group">
+      <label>
+        Type title
+        <input type="text" id="form-test-title" class="add-form__title">
+      </label>
+    </div>
+    <div class="add-form__group">
+      <label>
+        Type id
+        <input type="text" id="form-test-id" class="add-form__id">
+      </label>
+    </div>
+    <div class="add-form__group">
+      <label>
+        Type description
+        <textarea name="" id="form-test-description" cols="30" rows="10" class="add-form__description"></textarea>
+      </label>
+    </div>
+    <div class="add-form__group">
+      <label>
+        Type test
+        <textarea name="" id="from-test-code" cols="30" rows="10" class="add-form__test-code"></textarea>
+      </label>
+    </div>
+    <div class="add-form__group">
+      <label>
+        Type start code
+        <textarea name="" id="from-test-start-code" cols="30" rows="10" class="add-form__test-code"></textarea>
+      </label>
+    </div>
+    <div class="add-form__group">
+      <input type="submit" value="Load test">
+    </div>
+    <div class="add-form__status-info" id="add-form__status-info"></div>
+  </form>
+
+  <style>
+    .add-form__group label > * {
+      display: block;
+    }
+  </style>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDfudcPrdYtuys5U5lLL2qH3EBdx88OABA",
+      authDomain: "js-lab-base.firebaseapp.com",
+      projectId: "js-lab-base",
+      storageBucket: "js-lab-base.appspot.com",
+      messagingSenderId: "818103104605",
+      appId: "1:818103104605:web:d80091d2393db5985509b4",
+      measurementId: "G-RY6KQ99XTL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const findInDataBase = (callback) => {
+      firebase.database().ref('test/').on('value', callback);
+    };
+    
+    const removeFromDataBase = () => {};
+
+    const setToDataBase = (data, callback) => {
+      firebase.database().ref('test/1/' + Math.floor(Math.random()*10000000)).set({
+        id: '12d24d' + Math.random(),
+        text: 'asdd'
+      }, callback);
+    };
+
+    const infoFormTestBlock = document.querySelector('#add-form__status-info');
+
+    document.querySelector('#add-panel').addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const title = document.querySelector('#form-test-title').value;
+      const id = document.querySelector('#form-test-id').value;
+      const description = document.querySelector('#form-test-description').value;
+      const testCode = document.querySelector('#from-test-code').value;
+      const startCode = document.querySelector('#from-test-start-code').value;
+
+      const data = {
+        title,
+        id,
+        description,
+        testCode,
+        startCode,
+      }
+
+      console.log(title, id, description, testCode);
+
+      if (data.id === '') {
+        data.id = '_' + Math.random().toString(36).substr(2, 9);
+      }
+
+      firebase.database().ref('testsData/' + data.id).set(data, (err) => {
+        if (err) {
+          infoFormTestBlock.innerHTML = `<strong> ${err} </strong>`;
+        } else {
+          infoFormTestBlock.innerHTML = `<span style="background-color: green"> Data saved successfully! </span>`;
+          setTimeout(() => {
+            infoFormTestBlock.innerHTML = '';
+          }, 2000)
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>
