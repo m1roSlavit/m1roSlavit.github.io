@@ -1,5 +1,6 @@
 let codeEditor = CodeMirror(document.querySelector('#code-text-area'), {
-  value: 'function func() {\n	return;\n}\n',
+  // value: 'function func() {\n	return;\n}\n',
+  value: '',
   mode:  'javascript',
   theme: 'dracula',
   tabSize: 2,
