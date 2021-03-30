@@ -2,22 +2,15 @@ import {spinInitialize} from './spin.js';
 import {getCode} from './editor.js';
 import {clearLog} from './logs.js';
 import {executeTest} from './tests.js';
-import {getTestData} from './firebase.js';
+import {getExerciseByFilter, getCountByFilter} from './requests.js';
 import {selectHandler} from './selectHandler.js';
-
-selectHandler();
-
-const formChooseSelects = document.querySelectorAll('.form-choose-test-select');
-
-for (const elem of formChooseSelects) {
-  elem.addEventListener('change', selectHandler);
-}
+import {testsForm} from './testsForm.js';
+import {state} from './state.js';
 
 document.querySelector('#check-button').addEventListener('click', () => {
   clearLog();
 
-  const mochaTest = sessionStorage.getItem('mochaTest');
-  // console.log(mochaTest);
+  const mochaTest = state.currTest;
   if (!mochaTest) return;
 
   executeTest(getCode(), mochaTest);
@@ -25,4 +18,8 @@ document.querySelector('#check-button').addEventListener('click', () => {
 
 document.querySelector('#clear-log-button').addEventListener('click', () => {
   clearLog();
+});
+
+document.querySelector('#load-data-button').addEventListener('click', () => {
+  testsForm();
 });

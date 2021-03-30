@@ -1,9 +1,10 @@
 import {clearLog, writeLog} from './logs.js';
+import {_Xr98_scopeEval} from './testEvalScope.js';
 
 const executeTest = (userCode, testCode) => {
 
   try {
-    eval(userCode + testCode);
+    _Xr98_scopeEval(userCode + testCode);
     mocha.run(failures => console.log('failures: ' + failures));
   }
   catch (e) {

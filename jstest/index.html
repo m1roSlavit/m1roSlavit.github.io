@@ -12,7 +12,7 @@
   <!-- code mirror -->
   <script src="codemirror/lib/codemirror.js"></script>
   <link rel="stylesheet" href="codemirror/lib/codemirror.css">
-  <link rel="stylesheet" href="codemirror/theme/dracula.css">
+  <link rel="stylesheet" href="codemirror/theme/eclipse.css">
   <script src="codemirror/mode/javascript/javascript.js"></script>
   <!-- addon code mirror -->
   <script src="codemirror/addon/hint/show-hint.js"></script>
@@ -59,17 +59,9 @@
     </div>
     <div class="row mb-4">
       <div class="col position-relative">
-        <!-- <div class="form-floating">
-          <textarea style="min-height: 400px;" class="bg-light form-control code-text-area" placeholder="Leave a comment here" id="code-text-area" style="height: 100px"></textarea>
-          <label for="floatingTextarea2">Type code:</label>
-        </div> -->
-        <!-- <div class="spin-wrapper" id="code-sandbox__spin" style="opacity: 0;">
-          <div class="lds-dual-ring"></div>
-        </div> -->
-        <div class="code-sandbox bg-light border" id="code-text-area">
+        <div class="code-sandbox  border" id="code-text-area">
 
         </div>
-        <!-- <textarea style="display: none;" id="code-text-area"></textarea> -->
       </div>
     </div>
     <div class="row mb-4">
@@ -77,7 +69,7 @@
         <div class="spin-wrapper" id="task-block__spin" style="opacity: 0;">
           <div class="spinner"></div>
         </div>
-        <div class="task-block border bg-light p-2">
+        <div class="task-block border  p-2">
           <h6 class="task-block__title">Завдання:</h6>
           <div class="task-block__data" id="task-block-data"></div>
         </div>
@@ -85,26 +77,38 @@
     </div>
     <div class="row mb-4">
       <div class="col-3">
-        <form class="form bg-light border p-3">
-          <label for="form-group-varient" class="form-label">Виберіть свій варіант:</label>
-          <select name="variant" class="mb-4 form-select form-choose-test-select" id="form-group-varient">
-            <option value="1" selected>1</option>
-          </select>
-          <label for="form-group-lab" class="form-label">Виберіть лабараторну:</label>
-          <select name="lab" class="mb-2 form-select form-choose-test-select" id="form-group-lab">
-            <option value="1" selected>1</option>
-          </select>
-          <label for="form-group-exercise" class="form-label">Виберіть завдання:</label>
-          <select name="exercise" class="mb-2 form-select form-choose-test-select" id="form-group-exercise">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-          <button type="button" id="check-button" class="w-100 btn btn-secondary">Check</button>
+        <form class="form  border p-3">
+          <div class="mb-2">
+            <label for="form-group-lab" class="form-label">Введіть номер лабараторну:</label>
+            <input type="number" class="form-control" id="form-group-lab">
+            <!-- <select name="lab" class="mb-2 form-select form-choose-test-select" id="form-group-lab">
+              <option value="1" selected>1</option>
+            </select> -->
+          </div>
+          <div class="mb-2">
+            <label for="form-group-exercise" class="form-label">Введіть номер завдання:</label>
+            <input type="number" class="form-control" id="form-group-exercise">
+            <!-- <select name="exercise" class="mb-2 form-select form-choose-test-select" id="form-group-exercise">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select> -->
+          </div>
+          <div class="mb-2">
+            <label for="form-group-variant" class="form-label">Введіть номер свій варіант:</label>
+            <input type="number" class="form-control" id="form-group-variant">
+            <!-- <select name="variant" class="mb-2 form-select form-choose-test-select" id="form-group-variant">
+              <option value="1" selected>1</option>
+            </select> -->
+          </div>
+          <div class="mb-2 d-flex justify-content-between">
+            <button type="button" id="load-data-button" class="btn btn-light">Load data</button>
+            <button type="button" id="check-button" class="btn btn-secondary">Check</button>
+          </div>
         </form>
       </div>
       <div class="col-9">
-        <div class="error-block border bg-light p-2 h-100">
+        <div class="error-block border  p-2 h-100">
           <div class="error-block__title d-flex align-items-center">
             <h6 class="mt-auto mb-auto">Logs:</h6>
             <button type="button" id="clear-log-button" class="btn btn-dark pl-1 pr-1 pt-0 pb-0 fs-6 font-weight-normal" style="margin-left: auto;">

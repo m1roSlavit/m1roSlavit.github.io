@@ -1,7 +1,10 @@
-import {getTestData} from './firebase.js';
+// import {getTestData} from './requests.js';
 import {spinInitialize} from './spin.js';
 import {setCode} from './editor.js'
 
+const taskFilter = {
+  
+}
 
 const checkButton = document.querySelector('#check-button');
 const taskBlockData = document.querySelector('#task-block-data');
