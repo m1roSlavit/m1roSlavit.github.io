@@ -22,7 +22,7 @@
 //   // return "describe(\"pow\", function() {it(\"возводит число в степень n\", function() {assert.equal(func(2, 3), 8);assert.equal(func(3, 4), 81);});});";
 // }
 
-const urlAPI = 'https://agile-mountain-00946.herokuapp.com/'
+const urlAPI = false ? 'https://agile-mountain-00946.herokuapp.com/' :  'http://localhost:3000/'
 
 const post = (url, data) => {
   return fetch(url, {
@@ -54,4 +54,10 @@ const getExerciseByFilter = (filter) => {
     })
 }
 
-export {getCountByFilter, getExerciseByFilter};
+const checkFileTestsReq = async (data, testIndex) => {
+  const res = await post(urlAPI + 'tasks/checkFileTests', {testIndex, data});
+  const resTexted = await res.text();
+  return resTexted;
+}
+
+export {getCountByFilter, getExerciseByFilter, checkFileTestsReq};
