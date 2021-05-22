@@ -22,7 +22,7 @@
 //   // return "describe(\"pow\", function() {it(\"возводит число в степень n\", function() {assert.equal(func(2, 3), 8);assert.equal(func(3, 4), 81);});});";
 // }
 
-const urlAPI = false ? 'https://agile-mountain-00946.herokuapp.com/' :  'http://localhost:3000/'
+const urlAPI = true ? 'https://agile-mountain-00946.herokuapp.com/' :  'http://localhost:3000/'
 
 const post = (url, data) => {
   return fetch(url, {
