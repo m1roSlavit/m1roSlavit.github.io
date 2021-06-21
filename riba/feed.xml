@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Живая рыба, малёк&#8230;</title>
+	<atom:link href="http://riba7.com/feed" rel="self" type="application/rss+xml" />
+	<link>http://riba7.com</link>
+	<description>Живая рыба, малёк и не только</description>
+	<lastBuildDate>Tue, 07 Apr 2015 17:49:35 +0000</lastBuildDate>
+	<language>ru-RU</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<item>
+		<title>Реализуем:</title>
+		<link>http://riba7.com/http:/ramid.net/riba7/(the%20ID%20)</link>
+		<comments>http://riba7.com/http:/ramid.net/riba7/(the%20ID%20)#respond</comments>
+		<pubDate>Mon, 31 Jan 2011 22:37:01 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Без рубрики]]></category>
+
+		<guid isPermaLink="false">http://ramid.net/ryby7/?p=10</guid>
+		<description><![CDATA[Постоянно выращиваем и реализуем: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+ раннюю личинку рыб &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+ малек рыб &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+ двухлетку &#160;&#160;> Карп (рамчатый, зеркальный, чешуйчатый) &#160;&#160;> Толстолобик (белый, пёстрый, гибрид) &#160;&#160;> Амур &#160;&#160;> Щука &#160;&#160;> Cудак &#160;&#160;> Линь Возможна доставка по Украине специализированным автотранспортом. Все необходимые документы предоставляются.]]></description>
+				<content:encoded><![CDATA[<p><strong style="font-size: 20px;">Постоянно выращиваем и реализуем:</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span style="text-decoration: underline;">раннюю личинку рыб</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span style="text-decoration: underline;">малек рыб</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span style="text-decoration: underline;">двухлетку</span><br />
+&nbsp;&nbsp;> <strong><u>Карп</u></strong> <span style="font-size:12px;">(рамчатый, зеркальный, чешуйчатый)</span><br />
+&nbsp;&nbsp;> <strong><u>Толстолобик</u></strong>  <span style="font-size:12px;">(белый, пёстрый, гибрид)</span><br />
+&nbsp;&nbsp;> <strong><u>Амур</u></strong><br />
+&nbsp;&nbsp;> <strong>Щука</strong><br />
+&nbsp;&nbsp;> <strong>Cудак</strong><br />
+&nbsp;&nbsp;> <strong>Линь</strong></p>
+<p><strong style="text-decoration: underline;">Возможна доставка по Украине специализированным автотранспортом.</strong><br />
+<strong style="text-decoration: underline;">Все необходимые документы предоставляются.</strong></p>
+]]></content:encoded>
+			<wfw:commentRss>http://riba7.com/http:/ramid.net/riba7/(the%20ID%20)/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
