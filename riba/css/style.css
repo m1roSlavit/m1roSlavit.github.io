@@ -407,6 +407,12 @@ img.alignleft {
     display: none;
   }
 
+  .header__top{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+  }
+
   .nav {
     background-color: rgba(15, 11, 12, 0.9);
     position: absolute;
